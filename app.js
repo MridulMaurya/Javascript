@@ -1,11 +1,23 @@
-console.log('Hey, This is my first piecec of js code!!!')
+//Data types
+//Primitive and Non-Prmimtive Datatypes
 
-console.log(225487854)
+var Name = "Mridul"
+Name = ""
+console.log(Name)
 
-console.log(true)
+let age = 18;
+console.log(age)
+console.log(typeof age)
 
-console.log(false,'string',2515478,{name:"Mridul"})
+let brand = null
+console.log(brand)
+console.log(typeof undefined)
 
-console.warn("This is a warning")
-console.error("Do not distrub")
+
+let arr = [1,2,3,'string',true]
+arr.push('javascript')
+arr.push(663)
+arr.unshift('hello')
+console.log(arr)
+console.log(typeof arr)
 
