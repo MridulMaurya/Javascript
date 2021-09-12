@@ -61,5 +61,45 @@ console.log(a<=b)
 console.log(a==b) // Comparison
 console.log(a!=b)
 
+let a = 2   // Strict Equality Operator
+let b = 3
+console.log(a===b)
+
+// Logical Operator
+
+let i=2
+let j=3
+console.log(i<=j || i==j)
+console.log(i<=j && i==j)
+
+
+var l=5
+var k=6
+if (l>k){
+console.log('Greater')
+}
+else{
+    console.log('Lesser')
+}
+console.log(typeof(l))
+
+const t=0
+
+if (typeof a==='number')
+{
+   if (a===0){
+       console.log('zero')
+   } 
+    if (a%2 ===0)
+    {
+        console.log('even')
+    }
+    else{
+        console.log("odd")
+    }    
+}  else{
+    console.log('not a number')
+}    
+
 
 
