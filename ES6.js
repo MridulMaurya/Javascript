@@ -1,102 +1,68 @@
-// // ES6 Array Destructing
+// JS Array
+// Map() method
 
-console.log('Merged class 1 ES6')
+let ranks = [1, 2, 3, 4]
+console.log(ranks.map((e, index) => {
+    return (e, index)
+}))
 
-const arr = [1,2,3,4]
-console.log(arr[2])
+let mul = [4, 9, 16, 25, 36]
+const newArr = mul.map(Math.sqrt)
+console.log(newArr)
 
-const [one,two,three] = [1,2,3,4] //ES6 Destructuing
-console.log(three)
-console.log(four) //undefined
+// Map() vs forEach()
 
-function getscores() {
-    return [90,100]
-}
+let ranks = [1, 2, 3]     
+console.log(ranks.map((e, index) => {
+    return (e, index)
+}))
 
-let [x,y,z] =getscores()
-console.log(x)
-console.log(y)
-console.log(z)
+console.log(ranks.forEach((e, index) => {
+    return (e)
+}))
 
-// Array Destructuring Assignment and Rest syntax(...)
+let newArr = ranks.map((e) => {
+    if (e % 2 == 0)
+        return e
+})
+console.log(newArr)
 
-function getscores() {
-    return [10,20,30,40,50]
-}
-let [a,b,c,...args] = getscores();
-console.log(a)
-console.log(b)
-console.log(c)
-console.log(args)
+// filter() method
 
-//ES6 Object Destructuing
+let num = [1, 2, 3, 4, 5, 6]
 
-const obj = {
-    Name:'Mahi',
-    email:'mahi18@gmail.com',
-    age:22
-}
-console.log(obj.email)
-
-let {Name,email,age,dum} = obj //ES6 Destructing
-console.log(email)
-console.log(dum)
-
-// Example of ES6 Destructing
-
-let person ={
-    firstname:'Mridul',
-    lastname:'Maurya',
-    age1:21,
-}
-
-let {lastname,age1,firstname,middlename} = person  //order of variable dosen't matter
-console.log(firstname)
-console.log(lastname)
-console.log(age1)
-console.log(middlename)
-
-// //ES6 Arrow Function
-
-// let add = function(x,y,z) {
-//     return x+y+z;
-// }
-// console.log(add(10,10,20))
-
-let add = (x,y) =>{
-    return x+y
-}
-console.log(add(10,20))
-
-// this keyword
-
-const counter = {
-    count: 1,
-    next: function() {
-        return ++(this.count)*100
-    }
-}
-console.log(counter.next())
-console.log(counter.next())
-console.log(counter.next())
-console.log(counter.count)
-console.log(counter)
+let newfilterarr = num.filter((e, index) => {
+    if (e % 2 == 0)
+        return e
+})
+console.log(newfilterarr)
 
 
-let a,b;
-[a,b] = [10,20]
-console.log(a)
-console.log(b)
+let ages = [12, 36, 21, 48, 10, 65]
 
-function getitems () {
-    return [1,2]
-}
+let newfilterarr = ages.filter((age) => {
+    if (age >= 18)
+        return age
+})
+console.log(newfilterarr)
 
-let items = getitems()
-let thirdItem = items[1] != undefined ? items[1] : 0 ;
-console.log(thirdItem)
+// Promises 
 
-let a,b 
-[a=2, b=3] = []
-console.log(a)
-console.log(b)
+let concert = true
+
+let attendConcert = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        if (concert) {
+            resolve("Bob attended the concert");
+        }
+        else {
+            reject("Bob failed to attend the concert");
+        }
+    }, 2000);
+});
+console.log(attendConcert)
+
+
+attendConcert.then((data) => console.log(data)); // then() method
+
+attendConcert.catch((error) => console.log(error)); // catch() method
