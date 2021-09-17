@@ -48,7 +48,7 @@ console.log(newfilterarr)
 
 // Promises 
 
-let concert = true
+let concert =true
 
 let attendConcert = new Promise(function (resolve, reject) {
     setTimeout(() => {
@@ -66,3 +66,38 @@ console.log(attendConcert)
 attendConcert.then((data) => console.log(data)); // then() method
 
 attendConcert.catch((error) => console.log(error)); // catch() method
+
+// async and await function 
+
+async function afunc() {
+    let result = await attendConcert;
+    console.log(result);
+    return result;
+}
+console.log('afunc()=', afunc())
+
+// try and catch
+
+async function afunc() {
+    try {
+    let result = await attendConcert;
+    console.log(result);
+    }
+    catch(e) {
+        console.log(e)
+    }
+}
+afunc()
+
+// Arrow function of above example
+
+let afunc = async() => {
+    try{
+        let result = await attendConcert;
+        console.log(result)
+    }
+    catch(e){
+        console.log(e)
+    }
+}
+afunc()
